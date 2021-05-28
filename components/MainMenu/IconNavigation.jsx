@@ -9,7 +9,7 @@ import { ReactComponent as WishlistIcon } from "../../icons/tailwind-icons/icon-
 import { ReactComponent as SearchIcon } from "../../icons/tailwind-icons/icon-search.svg";
 import { ReactComponent as MyProfile } from "../../icons/tailwind-icons/icon-user.svg";
 
-import SearchForm from "./SearchForm";
+// import SearchForm from "./SearchForm";
 
 const IconNavigation = ({
   intl,
@@ -24,20 +24,6 @@ const IconNavigation = ({
 }) => {
   return (
     <div className={`flex justify-end text-2xl items-center ${variant}`}>
-      {showSearch ? (
-        <SearchForm
-          inputClassName="text-base"
-          onCancelSearch={onSearchToggle}
-        />
-      ) : (
-        <IconButton
-          name={"header.search"}
-          variant="outline-none focus:outline-none"
-          icon={<SearchIcon />}
-          onClick={onSearchToggle}
-        />
-      )}
-
       <IconButton
         name={"header.myAccount"}
         variant="hidden lg:block ml-6 outline-none focus:outline-none"
